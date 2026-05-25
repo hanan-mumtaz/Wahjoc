@@ -43,7 +43,13 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             <div className="flex flex-col h-full p-6">
               <div className="flex justify-between items-center mb-8">
                 {/* Brand logo duplicated in mobile drawer */}
-                <img src={logo} alt="Wahjoc" className="h-8 w-auto object-contain" />
+                <img
+                  src={logo}
+                  alt="Wahjoc Logo"
+                  className="h-8 w-auto object-contain"
+                  loading="eager"
+                  decoding="async"
+                />
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -112,8 +118,16 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -142,10 +156,12 @@ export default function Navigation() {
         whileTap={{ scale: 0.98 }}
         className="flex items-center"
       >
-        <img 
-          src={logo} 
-          alt="Wahjoc Logo" 
+        <img
+          src={logo}
+          alt="Wahjoc Logo"
           className="h-8 md:h-10 w-auto object-contain"
+          loading="eager"
+          decoding="async"
         />
       </motion.a>
 

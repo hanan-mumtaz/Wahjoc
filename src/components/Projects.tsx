@@ -36,7 +36,7 @@ const channels = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="relative py-20 md:py-32 bg-stone-50">
+    <section id="portfolio" className="relative py-12 md:py-20 lg:py-32 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}

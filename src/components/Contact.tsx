@@ -13,7 +13,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 md:py-32 bg-primary-50">
+    <section id="contact" className="relative py-12 md:py-20 lg:py-32 bg-primary-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -75,10 +75,10 @@ export default function Contact() {
                     {/* Name */}
                     <div className="space-y-2">
                       <label className="text-xs font-bold text-stone-700 uppercase tracking-wider">Your Name</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         required
-                        className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm font-medium focus:outline-none focus:border-accent-800 focus:bg-white transition-all"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-stone-50 border border-stone-200 rounded-lg sm:rounded-xl text-sm font-medium focus:outline-none focus:border-accent-800 focus:bg-white transition-all"
                         placeholder="John Doe"
                         value={formState.name}
                         onChange={(e) => setFormState({...formState, name: e.target.value})}
@@ -87,10 +87,10 @@ export default function Contact() {
                     {/* Email */}
                     <div className="space-y-2">
                       <label className="text-xs font-bold text-stone-700 uppercase tracking-wider">Email Address</label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         required
-                        className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm font-medium focus:outline-none focus:border-accent-800 focus:bg-white transition-all"
+                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-stone-50 border border-stone-200 rounded-lg sm:rounded-xl text-sm font-medium focus:outline-none focus:border-accent-800 focus:bg-white transition-all"
                         placeholder="name@example.com"
                         value={formState.email}
                         onChange={(e) => setFormState({...formState, email: e.target.value})}
@@ -101,8 +101,8 @@ export default function Contact() {
                   {/* Dynamic Desk Router Selection */}
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-stone-700 uppercase tracking-wider">Route To Specialized Desk</label>
-                    <select 
-                      className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm font-bold text-stone-800 focus:outline-none focus:border-accent-800 focus:bg-white transition-all cursor-pointer"
+                    <select
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-stone-50 border border-stone-200 rounded-lg sm:rounded-xl text-sm font-bold text-stone-800 focus:outline-none focus:border-accent-800 focus:bg-white transition-all cursor-pointer"
                       value={formState.desk}
                       onChange={(e) => setFormState({...formState, desk: e.target.value})}
                     >
@@ -116,10 +116,10 @@ export default function Contact() {
                   {/* Message */}
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-stone-700 uppercase tracking-wider">Correspondence Details</label>
-                    <textarea 
+                    <textarea
                       rows={5}
                       required
-                      className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm font-medium focus:outline-none focus:border-accent-800 focus:bg-white transition-all resize-none"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-stone-50 border border-stone-200 rounded-lg sm:rounded-xl text-sm font-medium focus:outline-none focus:border-accent-800 focus:bg-white transition-all resize-none"
                       placeholder="Provide detailed information regarding your inquiry..."
                       value={formState.message}
                       onChange={(e) => setFormState({...formState, message: e.target.value})}
@@ -129,7 +129,7 @@ export default function Contact() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full py-4 bg-accent-800 hover:bg-accent-900 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-md shadow-accent-800/10 flex items-center justify-center gap-2"
+                    className="w-full py-3 sm:py-4 bg-accent-800 hover:bg-accent-900 text-white font-bold text-sm rounded-lg sm:rounded-xl transition-all duration-300 shadow-md shadow-accent-800/10 flex items-center justify-center gap-2"
                   >
                     <span>Dispatch Inward Transmission</span>
                     <Send className="w-4 h-4" />

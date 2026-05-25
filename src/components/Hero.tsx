@@ -44,10 +44,10 @@ export default function Hero() {
   const ActiveIcon = channels[activeTab].icon;
 
   return (
-    <section id="hero" className="relative min-h-[85vh] flex items-center justify-center bg-stone-50 overflow-hidden pt-24 pb-12">
-      {/* Aesthetic background design shadow masks */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-800/5 rounded-full blur-[120px] -z-10" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-stone-200/50 rounded-full blur-[100px] -z-10" />
+    <section id="hero" className="relative min-h-screen md:min-h-[85vh] flex items-center justify-center bg-stone-50 overflow-hidden pt-20 md:pt-24 pb-8 md:pb-12">
+      {/* Aesthetic background design shadow masks - reduced on mobile */}
+      <div className="absolute top-0 right-0 w-[250px] h-[250px] md:w-[500px] md:h-[500px] bg-accent-800/5 rounded-full blur-[60px] md:blur-[120px] -z-10" />
+      <div className="absolute bottom-0 left-0 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-stone-200/50 rounded-full blur-[60px] md:blur-[100px] -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

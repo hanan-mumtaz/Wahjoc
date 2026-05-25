@@ -37,10 +37,12 @@ export default function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <img 
-                src={logo} 
-                alt="Wahjoc Logo" 
+              <img
+                src={logo}
+                alt="Wahjoc Logo"
                 className="h-8 md:h-10 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
             <p className="text-stone-600 text-sm max-w-xs leading-relaxed font-medium">
